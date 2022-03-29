@@ -3,7 +3,7 @@ output "container_registry_name" {
   value       = azurerm_container_registry.this.name
 }
 
-output "container_regsitry_id" {
+output "container_registry_id" {
   description = "ID of the created container registry"
   value       = azurerm_container_registry.this.id
 }
