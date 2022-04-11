@@ -6,9 +6,9 @@ import (
 	"github.com/gruntwork-io/terratest/modules/terraform"
 )
 
-func TestAcrWithManagedIdentityOperator(t *testing.T) {
+func TestTerraformAcr(t *testing.T) {
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
-		TerraformDir: "../examples/acr-with-managed-identity-operator",
+		TerraformDir: "./fixture",
 	})
 
 	defer terraform.Destroy(t, terraformOptions)
