@@ -30,6 +30,12 @@ variable "container_registry_sku" {
   default     = "Basic"
 }
 
+variable "tags" {
+  description = "A mapping of tags to assign to the resources."
+  type        = map(string)
+  default     = {}
+}
+
 variable "user_assigned_identity_name" {
   description = "The name of the User Assigned Identity."
   type        = string

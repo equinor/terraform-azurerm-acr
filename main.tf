@@ -1,5 +1,7 @@
 locals {
   application_alnum = join("", regexall("[a-z0-9]", lower(var.application)))
+
+  tags = merge({ application = var.application, environment = var.environment }, var.tags)
 }
 
 resource "azurerm_container_registry" "this" {
@@ -8,12 +10,16 @@ resource "azurerm_container_registry" "this" {
   resource_group_name = var.resource_group_name
   sku                 = var.container_registry_sku
   admin_enabled       = true
+
+  tags = local.tags
 }
 
 resource "azurerm_user_assigned_identity" "this" {
   name                = coalesce(var.user_assigned_identity_name, "id-acr-user-${var.application}-${var.environment}")
   location            = var.location
   resource_group_name = var.resource_group_name
+
+  tags = local.tags
 }
 
 resource "azurerm_role_assignment" "acr_pull" {
