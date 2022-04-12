@@ -22,8 +22,8 @@ resource "azurerm_resource_group" "example" {
 module "acr" {
   source = "github.com/equinor/terraform-azurerm-acr"
 
-  app_name            = local.app_name
-  environment_name    = local.environment_name
+  application = local.application
+  environment = local.environment
 
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
