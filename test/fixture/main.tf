@@ -3,24 +3,29 @@ provider "azurerm" {
 }
 
 locals {
-  app_name         = "ops-acr"
-  environment_name = "example"
+  application = random_id.this.hex
+  environment = "test"
+}
+
+resource "random_id" "this" {
+  byte_length = 8
 }
 
 data "azurerm_client_config" "current" {}
 
-resource "azurerm_resource_group" "example" {
-  name     = "rg-${local.app_name}-${local.environment_name}"
-  location = "northeurope"
+resource "azurerm_resource_group" "this" {
+  name     = "rg-${local.application}-${local.environment}"
+  location = var.location
 }
 
 module "acr" {
   source = "../.."
 
-  app_name            = local.app_name
-  environment_name    = local.environment_name
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  application = local.application
+  environment = local.environment
+
+  location            = azurerm_resource_group.this.location
+  resource_group_name = azurerm_resource_group.this.name
 
   managed_identity_operators = [data.azurerm_client_config.current.object_id]
 }

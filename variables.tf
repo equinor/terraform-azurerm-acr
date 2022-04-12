@@ -1,43 +1,49 @@
-variable "app_name" {
-  description = "Application name, used to generate resource names"
+variable "application" {
+  description = "The application to create the resources for."
   type        = string
 }
 
-variable "environment_name" {
-  description = "Environment name, used to generate resource names"
-  type        = string
-}
-
-variable "location" {
-  description = "Location to create resources in"
-  type        = string
-}
-
-variable "resource_group_name" {
-  description = "Name of resource group to create resources in"
+variable "environment" {
+  description = "The environment to create the resources for."
   type        = string
 }
 
 variable "container_registry_name" {
-  description = "Name of container registry to create, generated if not set"
+  description = "Specifies the name of the Container Registry."
   type        = string
   default     = null
 }
 
+variable "location" {
+  description = "Specifies the supported Azure location where the resources exist."
+  type        = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the resources."
+  type        = string
+}
+
 variable "container_registry_sku" {
-  description = "SKU of container registry to create"
+  description = "The SKU name of the Container Registry."
   type        = string
   default     = "Basic"
 }
 
-variable "managed_identity_name" {
-  description = "Name of managed identity to create, generated if not set"
+variable "tags" {
+  description = "A mapping of tags to assign to the resources."
+  type        = map(string)
+  default     = {}
+}
+
+variable "user_assigned_identity_name" {
+  description = "The name of the User Assigned Identity."
   type        = string
   default     = null
 }
 
 variable "managed_identity_operators" {
-  description = "IDs of Azure AD objects that should be able to read and assign the created managed identity"
+  description = "The IDs of the Principals that should be able to read and assign the User Assigned Identity."
   type        = list(string)
   default     = []
 }
