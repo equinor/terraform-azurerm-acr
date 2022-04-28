@@ -11,7 +11,7 @@ output "container_registry_name" {
 output "container_registry_login_server" {
   description = "The URL that can be used to log into the Container Registry."
   sensitive   = true
-  value       = azurerm_container_registry.this.admin_username
+  value       = azurerm_container_registry.this.login_server
 }
 
 output "container_registry_admin_username" {
