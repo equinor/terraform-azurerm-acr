@@ -81,10 +81,10 @@ No modules.
 | <a name="input_container_registry_sku"></a> [container\_registry\_sku](#input\_container\_registry\_sku) | The SKU name of the Container Registry. | `string` | `"Basic"` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | The environment to create the resources for. | `string` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | Specifies the supported Azure location where the resources exist. | `string` | n/a | yes |
+| <a name="input_managed_identity_name"></a> [managed\_identity\_name](#input\_managed\_identity\_name) | The name of the User Assigned Identity. | `string` | `null` | no |
 | <a name="input_managed_identity_operators"></a> [managed\_identity\_operators](#input\_managed\_identity\_operators) | The IDs of the Principals that should be able to read and assign the User Assigned Identity. | `list(string)` | `[]` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which to create the resources. | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to the resources. | `map(string)` | `{}` | no |
-| <a name="input_user_assigned_identity_name"></a> [user\_assigned\_identity\_name](#input\_user\_assigned\_identity\_name) | The name of the User Assigned Identity. | `string` | `null` | no |
 
 ## Outputs
 
