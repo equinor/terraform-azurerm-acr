@@ -9,19 +9,17 @@ output "container_registry_name" {
 }
 
 output "container_registry_login_server" {
-  description = "The URL that can be used to log into the Container Registry."
-  sensitive   = true
+  description = "The login server of the Container Registry."
   value       = azurerm_container_registry.this.login_server
 }
 
 output "container_registry_admin_username" {
-  description = "The Username associated with the Container Registry Admin account."
-  sensitive   = true
+  description = "The admin username of the Container Registry."
   value       = azurerm_container_registry.this.admin_username
 }
 
 output "container_registry_admin_password" {
-  description = "The Password associated with the Container Registry Admin account."
+  description = "The admin username of the Container Registry."
   sensitive   = true
   value       = azurerm_container_registry.this.admin_password
 }
@@ -37,16 +35,16 @@ output "managed_identity_id" {
 }
 
 output "managed_identity_principal_id" {
-  description = "Client ID associated with the Managed Identity."
+  description = "The principal ID of the Managed Identity."
   value       = azurerm_user_assigned_identity.this.principal_id
 }
 
 output "managed_identity_client_id" {
-  description = "Client ID associated with the Managed Identity."
+  description = "The client ID of the Managed Identity."
   value       = azurerm_user_assigned_identity.this.client_id
 }
 
 output "managed_identity_tenant_id" {
-  description = "Tenant ID associated with the Managed Identity."
+  description = "The tenant ID of the Managed Identity."
   value       = azurerm_user_assigned_identity.this.tenant_id
 }
