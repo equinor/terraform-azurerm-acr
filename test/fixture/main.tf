@@ -27,5 +27,5 @@ module "acr" {
   location            = azurerm_resource_group.this.location
   resource_group_name = azurerm_resource_group.this.name
 
-  managed_identity_operators = [data.azurerm_client_config.current.object_id]
+  identity_operators = [data.azurerm_client_config.current.object_id]
 }

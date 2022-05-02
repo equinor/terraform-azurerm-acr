@@ -8,14 +8,8 @@ variable "environment" {
   type        = string
 }
 
-variable "container_registry_name" {
-  description = "Specifies the name of the Container Registry."
-  type        = string
-  default     = null
-}
-
 variable "location" {
-  description = "Specifies the supported Azure location where the resources exist."
+  description = "The supported Azure location where the resources exist."
   type        = string
 }
 
@@ -24,26 +18,32 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "container_registry_sku" {
-  description = "The SKU name of the Container Registry."
+variable "registry_name" {
+  description = "A custom name for the Container Registry."
+  type        = string
+  default     = null
+}
+
+variable "registry_sku" {
+  description = "The SKU tier for the Container Registry."
   type        = string
   default     = "Basic"
+}
+
+variable "identity_name" {
+  description = "A custom name for the Managed Identity."
+  type        = string
+  default     = null
+}
+
+variable "identity_operators" {
+  description = "The IDs of the principals that should be able to read and assign the Managed Identity."
+  type        = list(string)
+  default     = []
 }
 
 variable "tags" {
   description = "A mapping of tags to assign to the resources."
   type        = map(string)
   default     = {}
-}
-
-variable "user_assigned_identity_name" {
-  description = "The name of the User Assigned Identity."
-  type        = string
-  default     = null
-}
-
-variable "managed_identity_operators" {
-  description = "The IDs of the Principals that should be able to read and assign the User Assigned Identity."
-  type        = list(string)
-  default     = []
 }
