@@ -28,7 +28,7 @@ resource "azurerm_role_assignment" "acr_pull" {
   principal_id         = azurerm_user_assigned_identity.this.principal_id
 }
 
-resource "azurerm_role_assignment" "managed_identity_operator" {
+resource "azurerm_role_assignment" "identity_operator" {
   for_each = toset(var.identity_operators)
 
   scope                = azurerm_user_assigned_identity.this.id
