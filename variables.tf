@@ -36,7 +36,7 @@ variable "tags" {
   default     = {}
 }
 
-variable "user_assigned_identity_name" {
+variable "managed_identity_name" {
   description = "The name of the User Assigned Identity."
   type        = string
   default     = null
