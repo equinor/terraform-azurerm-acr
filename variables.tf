@@ -9,13 +9,13 @@ variable "environment" {
 }
 
 variable "container_registry_name" {
-  description = "Specifies the name of the Container Registry."
+  description = "A custom name for the Container Registry."
   type        = string
   default     = null
 }
 
 variable "location" {
-  description = "Specifies the supported Azure location where the resources exist."
+  description = "The supported Azure location where the resources exist."
   type        = string
 }
 
@@ -25,7 +25,7 @@ variable "resource_group_name" {
 }
 
 variable "container_registry_sku" {
-  description = "The SKU name of the Container Registry."
+  description = "The SKU tier for the Container Registry."
   type        = string
   default     = "Basic"
 }
@@ -37,13 +37,13 @@ variable "tags" {
 }
 
 variable "managed_identity_name" {
-  description = "The name of the User Assigned Identity."
+  description = "A custom name for the Managed Identity."
   type        = string
   default     = null
 }
 
 variable "managed_identity_operators" {
-  description = "The IDs of the Principals that should be able to read and assign the User Assigned Identity."
+  description = "A list of IDs of the Azure AD objects that should be able to read and assign the Managed Identity."
   type        = list(string)
   default     = []
 }
