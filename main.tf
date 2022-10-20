@@ -22,4 +22,13 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
       enabled = false
     }
   }
+  log {
+    category = "ContainerRegistryRepositoryEvents"
+    enabled  = true
+
+    retention_policy {
+      days    = 0
+      enabled = false
+    }
+  }
 }
