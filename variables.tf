@@ -18,6 +18,11 @@ variable "sku" {
   default     = "Basic"
 }
 
+variable "log_analytics_workspace_id" {
+  description = "The ID of the Log Analytics workspace to send diagnostics to."
+  type        = string
+}
+
 variable "tags" {
   description = "A mapping of tags to assign to the resources."
   type        = map(string)

@@ -7,3 +7,19 @@ resource "azurerm_container_registry" "this" {
 
   tags = var.tags
 }
+
+resource "azurerm_monitor_diagnostic_setting" "this" {
+  name                       = "audit-logs"
+  target_resource_id         = azurerm_container_registry.this.id
+  log_analytics_workspace_id = var.log_analytics_workspace_id
+
+  log {
+    category = "ContainerRegistryLoginEvents"
+    enabled  = true
+
+    retention_policy {
+      days    = 0
+      enabled = false
+    }
+  }
+}
