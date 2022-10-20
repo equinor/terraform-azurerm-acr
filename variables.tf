@@ -23,15 +23,3 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
-
-variable "managed_identity_name" {
-  description = "A custom name for the Managed Identity."
-  type        = string
-  default     = null
-}
-
-variable "managed_identity_operators" {
-  description = "A list of IDs of the Azure AD objects that should be able to read and assign the Managed Identity."
-  type        = list(string)
-  default     = []
-}
