@@ -4,4 +4,3 @@ Terraform configuration which creates an Azure Container Registry with the follo
 
 - Basic SKU
 - Administrator enabled
-- User assigned identity with role `AcrPull`
