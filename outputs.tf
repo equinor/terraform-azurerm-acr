@@ -1,24 +1,24 @@
-output "container_registry_id" {
+output "registry_id" {
   description = "The ID of the Container Registry."
   value       = azurerm_container_registry.this.id
 }
 
-output "container_registry_name" {
+output "registry_name" {
   description = "The name of the Container Registry."
   value       = azurerm_container_registry.this.name
 }
 
-output "container_registry_login_server" {
+output "registry_login_server" {
   description = "The login server of the Container Registry."
   value       = azurerm_container_registry.this.login_server
 }
 
-output "container_registry_admin_username" {
+output "registry_admin_username" {
   description = "The admin username of the Container Registry."
   value       = azurerm_container_registry.this.admin_username
 }
 
-output "container_registry_admin_password" {
+output "registry_admin_password" {
   description = "The admin username of the Container Registry."
   sensitive   = true
   value       = azurerm_container_registry.this.admin_password
