@@ -1,5 +1,5 @@
 variable "registry_name" {
-  description = "The name of this Container registry."
+  description = "The name of this Container Registry."
 }
 
 variable "location" {
@@ -21,6 +21,12 @@ variable "sku" {
 variable "log_analytics_workspace_id" {
   description = "The ID of the Log Analytics workspace to send diagnostics to."
   type        = string
+}
+
+variable "diagnostic_setting_name" {
+  description = "The name of this Diagnostic Setting."
+  type        = string
+  default     = "audit-logs"
 }
 
 variable "tags" {

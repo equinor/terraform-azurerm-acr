@@ -9,7 +9,7 @@ resource "azurerm_container_registry" "this" {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
-  name                       = "audit-logs"
+  name                       = var.diagnostic_setting_name
   target_resource_id         = azurerm_container_registry.this.id
   log_analytics_workspace_id = var.log_analytics_workspace_id
 
