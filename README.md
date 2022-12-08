@@ -25,6 +25,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [azurerm_container_registry.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry) | resource |
+| [azurerm_container_registry_webhook.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry_webhook) | resource |
 | [azurerm_monitor_diagnostic_setting.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/monitor_diagnostic_setting) | resource |
 
 ## Inputs
@@ -33,10 +34,11 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_location"></a> [location](#input\_location) | The supported Azure location where the resources exist. | `string` | n/a | yes |
 | <a name="input_log_analytics_workspace_id"></a> [log\_analytics\_workspace\_id](#input\_log\_analytics\_workspace\_id) | The ID of the Log Analytics workspace to send diagnostics to. | `string` | n/a | yes |
-| <a name="input_registry_name"></a> [registry\_name](#input\_registry\_name) | The name of this Container registry. | `any` | n/a | yes |
+| <a name="input_registry_name"></a> [registry\_name](#input\_registry\_name) | The name of this Container Registry. | `any` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which to create the resources. | `string` | n/a | yes |
 | <a name="input_sku"></a> [sku](#input\_sku) | The SKU tier for the Container Registry. | `string` | `"Basic"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to the resources. | `map(string)` | `{}` | no |
+| <a name="input_webhook"></a> [webhook](#input\_webhook) | A map of identifiers for this Webhook. | <pre>list(object({<br>    name        = string<br>    service_uri = string<br>    status      = string<br>    scope       = string<br>    actions     = list(string)<br>  }))</pre> | `[]` | no |
 
 ## Outputs
 
