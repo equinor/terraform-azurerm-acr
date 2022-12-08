@@ -19,7 +19,7 @@ variable "sku" {
 }
 
 variable "webhook" {
-  description = "A map of identifiers for this Webhook."
+  description = "A list of objects required for this Webhook."
   type = list(object({
     name        = string
     service_uri = string
