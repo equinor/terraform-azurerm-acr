@@ -1,5 +1,5 @@
 variable "registry_name" {
-  description = "The name of this Container registry."
+  description = "The name of this Container Registry."
 }
 
 variable "location" {
@@ -16,6 +16,18 @@ variable "sku" {
   description = "The SKU tier for the Container Registry."
   type        = string
   default     = "Basic"
+}
+
+variable "webhook" {
+  description = "A map of identifiers for this Webhook."
+  type = list(object({
+    name        = string
+    service_uri = string
+    status      = string
+    scope       = string
+    actions     = list(string)
+  }))
+  default = []
 }
 
 variable "log_analytics_workspace_id" {
