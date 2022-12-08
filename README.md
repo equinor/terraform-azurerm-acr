@@ -38,7 +38,7 @@ No modules.
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which to create the resources. | `string` | n/a | yes |
 | <a name="input_sku"></a> [sku](#input\_sku) | The SKU tier for the Container Registry. | `string` | `"Basic"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to the resources. | `map(string)` | `{}` | no |
-| <a name="input_webhook"></a> [webhook](#input\_webhook) | A map of identifiers for this Webhook. | <pre>list(object({<br>    name        = string<br>    service_uri = string<br>    status      = string<br>    scope       = string<br>    actions     = list(string)<br>  }))</pre> | `[]` | no |
+| <a name="input_webhook"></a> [webhook](#input\_webhook) | A list of objects required for this Webhook. | <pre>list(object({<br>    name        = string<br>    service_uri = string<br>    status      = string<br>    scope       = string<br>    actions     = list(string)<br>  }))</pre> | `[]` | no |
 
 ## Outputs
 
