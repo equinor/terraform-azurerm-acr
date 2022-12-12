@@ -5,6 +5,6 @@ Terraform configuration which creates an Azure Container Registry with the follo
 - 90 days log retention
 - Basic SKU
 - Administrator enabled
-- A Web App webhook with all properties
-- A SQL webhook with only required properties
+- Webhook with all properties
+- Webhook with only required properties
 - Send logs to Log Analytics Workspace
