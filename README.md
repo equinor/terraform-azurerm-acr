@@ -25,6 +25,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [azurerm_container_registry.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry) | resource |
+| [azurerm_container_registry_webhook.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry_webhook) | resource |
 | [azurerm_monitor_diagnostic_setting.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/monitor_diagnostic_setting) | resource |
 
 ## Inputs
@@ -38,6 +39,7 @@ No modules.
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which to create the resources. | `string` | n/a | yes |
 | <a name="input_sku"></a> [sku](#input\_sku) | The SKU tier for the Container Registry. | `string` | `"Basic"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to the resources. | `map(string)` | `{}` | no |
+| <a name="input_webhooks"></a> [webhooks](#input\_webhooks) | A map of webhooks to create for this Container Registry. | <pre>map(object({<br>    name        = string<br>    service_uri = string<br>    actions     = optional(list(string), ["push"])<br>    status      = optional(string, "enabled")<br>    scope       = optional(string, "")<br>  }))</pre> | `{}` | no |
 
 ## Outputs
 
