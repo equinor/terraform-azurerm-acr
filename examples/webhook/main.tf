@@ -28,13 +28,18 @@ module "acr" {
   resource_group_name        = azurerm_resource_group.this.name
   log_analytics_workspace_id = module.log_analytics.workspace_id
 
-  webhook = [
-    {
-      name        = "mywebhook"
-      service_uri = "https://mywebhookreceiver.example/mytag"
+  webhooks = {
+    "webapp" = {
+      name        = "webappwebhook"
+      service_uri = "https://webappwebhookreceiver.example/webapptag"
+      actions     = ["push"]
       status      = "enabled"
-      scope       = "mytag:*"
+      scope       = "webapptag:*"
+    }
+    "sql" = {
+      name        = "sqlwebhook"
+      service_uri = "https://sqlwebhookreceiver.example"
       actions     = ["push"]
     }
-  ]
+  }
 }
