@@ -9,7 +9,7 @@ resource "azurerm_container_registry" "this" {
 }
 
 resource "azurerm_container_registry_webhook" "this" {
-  for_each = { for object in var.webhooks : object.name => object }
+  for_each = var.webhooks
 
   name                = each.value.name
   registry_name       = azurerm_container_registry.this.name
