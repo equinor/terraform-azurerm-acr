@@ -35,6 +35,12 @@ variable "log_analytics_workspace_id" {
   type        = string
 }
 
+variable "log_analytics_destination_type" {
+  description = "The type of log analytics destination to use for this Log Analytics Workspace."
+  type        = string
+  default     = "AzureDiagnostics"
+}
+
 variable "diagnostic_setting_name" {
   description = "The name of this Diagnostic Setting."
   type        = string

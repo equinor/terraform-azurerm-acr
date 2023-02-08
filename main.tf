@@ -25,28 +25,17 @@ resource "azurerm_container_registry_webhook" "this" {
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
-  name                       = var.diagnostic_setting_name
-  target_resource_id         = azurerm_container_registry.this.id
-  log_analytics_workspace_id = var.log_analytics_workspace_id
+  name                           = var.diagnostic_setting_name
+  target_resource_id             = azurerm_container_registry.this.id
+  log_analytics_workspace_id     = var.log_analytics_workspace_id
+  log_analytics_destination_type = var.log_analytics_destination_type
 
-  log {
+  enabled_log {
     category = "ContainerRegistryLoginEvents"
-    enabled  = true
-
-    retention_policy {
-      days    = 0
-      enabled = false
-    }
   }
 
-  log {
+  enabled_log {
     category = "ContainerRegistryRepositoryEvents"
-    enabled  = true
-
-    retention_policy {
-      days    = 0
-      enabled = false
-    }
   }
 
   metric {
