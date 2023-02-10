@@ -6,9 +6,9 @@ import (
 	"github.com/gruntwork-io/terratest/modules/terraform"
 )
 
-func TestWebhookExample(t *testing.T) {
+func TestCompleteExample(t *testing.T) {
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
-		TerraformDir: "../examples/webhook",
+		TerraformDir: "../examples/complete",
 	})
 
 	defer terraform.Destroy(t, terraformOptions)
