@@ -18,8 +18,20 @@ variable "sku" {
   default     = "Basic"
 }
 
+variable "georeplications" {
+  description = "The properties of the geo-replication of this Container Registry. Only availiable for Premium SKU."
+
+  type = object({
+    location                = string                # The location where this Container Registry should be geo-replicated.
+    zone_redundancy_enabled = optional(bool, false) # Is zone redundancy enabled for this replication location?
+  })
+
+  default = null
+}
+
 variable "webhooks" {
   description = "A map of webhooks to create for this Container Registry."
+
   type = map(object({
     name        = string
     service_uri = string
@@ -27,6 +39,7 @@ variable "webhooks" {
     status      = optional(string, "enabled")
     scope       = optional(string, "")
   }))
+
   default = {}
 }
 

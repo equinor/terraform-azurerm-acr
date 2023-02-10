@@ -5,6 +5,15 @@ resource "azurerm_container_registry" "this" {
   sku                 = var.sku
   admin_enabled       = true
 
+  dynamic "georeplications" {
+    for_each = var.georeplications != null ? [var.georeplications] : []
+
+    content {
+      location                = georeplications.value["location"]
+      zone_redundancy_enabled = georeplications.value["zone_redundancy_enabled"]
+    }
+  }
+
   tags = var.tags
 }
 
