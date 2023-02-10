@@ -19,14 +19,14 @@ variable "sku" {
 }
 
 variable "georeplications" {
-  description = "The properties of the geo-replication of this Container Registry. Only availiable for Premium SKU."
+  description = "A list of properties of the geo-replication blocks for this Container Registry. Only availiable for Premium SKU."
 
-  type = object({
+  type = list(object({
     location                = string                # The location where this Container Registry should be geo-replicated.
     zone_redundancy_enabled = optional(bool, false) # Is zone redundancy enabled for this replication location?
-  })
+  }))
 
-  default = null
+  default = []
 }
 
 variable "webhooks" {
