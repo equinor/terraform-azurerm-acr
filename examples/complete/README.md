@@ -1,9 +1,10 @@
-# Webhook example
+# Complete example
 
 Terraform configuration which creates an Azure Container Registry with the following features:
 
 - 90 days log retention
-- Basic SKU
+- Premium SKU
+- Geo-replication enabled
 - Administrator enabled
 - Webhook with all properties
 - Webhook with only required properties

@@ -27,6 +27,19 @@ module "acr" {
   location                   = azurerm_resource_group.this.location
   resource_group_name        = azurerm_resource_group.this.name
   log_analytics_workspace_id = module.log_analytics.workspace_id
+  sku                        = "Premium"
+
+  # If one or more georeplications block is specified, they are expected to follow the alphabetic order on the location property.
+  georeplications = [
+    {
+      location                = "Norway East"
+      zone_redundancy_enabled = false
+    },
+    {
+      location                = "West Europe"
+      zone_redundancy_enabled = false
+    }
+  ]
 
   webhooks = {
     "webapp" = {

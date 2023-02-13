@@ -23,3 +23,8 @@ output "registry_admin_password" {
   sensitive   = true
   value       = azurerm_container_registry.this.admin_password
 }
+
+output "sku" {
+  description = "The SKU tier for the Container Registry."
+  value       = azurerm_container_registry.this.sku
+}
