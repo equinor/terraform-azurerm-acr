@@ -27,6 +27,7 @@ module "acr" {
   location                   = azurerm_resource_group.this.location
   resource_group_name        = azurerm_resource_group.this.name
   log_analytics_workspace_id = module.log_analytics.workspace_id
+  admin_enabled              = false
   sku                        = "Premium"
 
   # If one or more georeplications block is specified, they are expected to follow the alphabetic order on the location property.

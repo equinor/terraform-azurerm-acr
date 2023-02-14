@@ -18,6 +18,12 @@ variable "sku" {
   default     = "Basic"
 }
 
+variable "admin_enabled" {
+  description = "Is admin enabled for this Container Registry?"
+  type        = bool
+  default     = false
+}
+
 variable "georeplications" {
   description = "A list of properties of the geo-replication blocks for this Container Registry. Only availiable for Premium SKU."
 
