@@ -3,7 +3,7 @@ resource "azurerm_container_registry" "this" {
   location            = var.location
   resource_group_name = var.resource_group_name
   sku                 = var.sku
-  admin_enabled       = true
+  admin_enabled       = var.admin_enabled
 
   dynamic "georeplications" {
     for_each = var.georeplications
