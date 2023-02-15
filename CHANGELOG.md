@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0](https://github.com/equinor/terraform-azurerm-acr/compare/v4.4.0...v5.0.0) (2023-02-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* admin account disabled by default. To upgrade, set `admin_enabled` to `true`.
+
+### Features
+
+* disable acr admin account ([#37](https://github.com/equinor/terraform-azurerm-acr/issues/37)) ([6b5547c](https://github.com/equinor/terraform-azurerm-acr/commit/6b5547c7f76fc406da37f43ecabc9fca9122fe74))
+
 ## [4.4.0](https://github.com/equinor/terraform-azurerm-acr/compare/v4.3.0...v4.4.0) (2023-02-08)
 
 
