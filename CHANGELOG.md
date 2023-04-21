@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.0](https://github.com/equinor/terraform-azurerm-acr/compare/v5.0.0...v5.1.0) (2023-04-21)
+
+
+### Features
+
+* set diagnostic setting enabled log categories ([#40](https://github.com/equinor/terraform-azurerm-acr/issues/40)) ([9a527e7](https://github.com/equinor/terraform-azurerm-acr/commit/9a527e78e94fead31dae2e372ac96f74a3d1558a))
+
 ## [5.0.0](https://github.com/equinor/terraform-azurerm-acr/compare/v4.4.0...v5.0.0) (2023-02-15)
 
 
