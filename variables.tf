@@ -60,6 +60,16 @@ variable "log_analytics_destination_type" {
   default     = null
 }
 
+variable "diagnostic_setting_enabled_log_categories" {
+  description = "A list of log categories to be enabled for this diagnostic setting."
+  type        = list(string)
+
+  default = [
+    "ContainerRegistryLoginEvents",
+    "ContainerRegistryRepositoryEvents"
+  ]
+}
+
 variable "diagnostic_setting_name" {
   description = "The name of this Diagnostic Setting."
   type        = string
