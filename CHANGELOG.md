@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.1](https://github.com/equinor/terraform-azurerm-acr/compare/v5.1.0...v5.1.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* don't specify Log Analytics destination type ([#45](https://github.com/equinor/terraform-azurerm-acr/issues/45)) ([7708870](https://github.com/equinor/terraform-azurerm-acr/commit/770887088faf56165f0d19c18f1fbe377efee36c))
+
 ## [5.1.0](https://github.com/equinor/terraform-azurerm-acr/compare/v5.0.0...v5.1.0) (2023-04-21)
 
 
