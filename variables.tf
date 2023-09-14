@@ -35,20 +35,6 @@ variable "georeplications" {
   default = []
 }
 
-variable "webhooks" {
-  description = "A map of webhooks to create for this Container Registry."
-
-  type = map(object({
-    name        = string
-    service_uri = string
-    actions     = optional(list(string), ["push"])
-    status      = optional(string, "enabled")
-    scope       = optional(string, "")
-  }))
-
-  default = {}
-}
-
 variable "log_analytics_workspace_id" {
   description = "The ID of the Log Analytics workspace to send diagnostics to."
   type        = string

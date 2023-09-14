@@ -41,19 +41,4 @@ module "acr" {
       zone_redundancy_enabled = false
     }
   ]
-
-  webhooks = {
-    "webapp" = {
-      name        = "webappwebhook"
-      service_uri = "https://webappwebhookreceiver.example/webapptag"
-      actions     = ["push"]
-      status      = "enabled"
-      scope       = "webapptag:*"
-    }
-    "sql" = {
-      name        = "sqlwebhook"
-      service_uri = "https://sqlwebhookreceiver.example"
-      actions     = ["push"]
-    }
-  }
 }
