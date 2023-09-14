@@ -1,5 +1,16 @@
 # Changelog
 
+## [6.0.0](https://github.com/equinor/terraform-azurerm-acr/compare/v5.1.1...v6.0.0) (2023-09-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* don't create webhooks ([#50](https://github.com/equinor/terraform-azurerm-acr/issues/50))
+
+### Features
+
+* don't create webhooks ([#50](https://github.com/equinor/terraform-azurerm-acr/issues/50)) ([7c2751c](https://github.com/equinor/terraform-azurerm-acr/commit/7c2751c2b836da2025a7f657357b95210e4987c4)), closes [#44](https://github.com/equinor/terraform-azurerm-acr/issues/44)
+
 ## [5.1.1](https://github.com/equinor/terraform-azurerm-acr/compare/v5.1.0...v5.1.1) (2023-08-31)
 
 
