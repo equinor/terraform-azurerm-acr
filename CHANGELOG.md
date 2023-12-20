@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.1](https://github.com/equinor/terraform-azurerm-acr/compare/v6.0.0...v6.0.1) (2023-12-20)
+
+
+### Bug Fixes
+
+* remove diagnostic setting retention policies ([#61](https://github.com/equinor/terraform-azurerm-acr/issues/61)) ([3f66a5c](https://github.com/equinor/terraform-azurerm-acr/commit/3f66a5c3485faab1630eac36ef1131ce395221b0))
+
 ## [6.0.0](https://github.com/equinor/terraform-azurerm-acr/compare/v5.1.1...v6.0.0) (2023-09-14)
 
 
