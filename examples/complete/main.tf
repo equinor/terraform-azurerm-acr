@@ -25,7 +25,6 @@ module "acr" {
   admin_enabled              = false
   sku                        = "Premium"
 
-  # If one or more georeplications block is specified, they are expected to follow the alphabetic order on the location property.
   georeplications = [
     {
       location                = "Norway East"

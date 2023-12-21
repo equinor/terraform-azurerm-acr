@@ -25,14 +25,19 @@ variable "admin_enabled" {
 }
 
 variable "georeplications" {
-  description = "A list of properties of the geo-replication blocks for this Container Registry. Only availiable for Premium SKU."
+  description = "A list of geo-replications to configure for this Container Registry. Only availiable for Premium SKU."
 
   type = list(object({
-    location                = string                # The location where this Container Registry should be geo-replicated.
-    zone_redundancy_enabled = optional(bool, false) # Is zone redundancy enabled for this replication location?
+    location                = string
+    zone_redundancy_enabled = optional(bool, false)
   }))
 
   default = []
+
+  validation {
+    condition     = length(var.georeplications) == length(distinct([for georeplication in var.georeplications : georeplication.location]))
+    error_message = "Value of property \"location\" must be unique for each object."
+  }
 }
 
 variable "log_analytics_workspace_id" {

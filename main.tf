@@ -1,3 +1,11 @@
+locals {
+  # Store gepreplications in map where key is location.
+  # This automatically sorts the map by location.
+  georeplications = {
+    for georeplication in var.georeplications : georeplication.location => georeplication
+  }
+}
+
 resource "azurerm_container_registry" "this" {
   name                = var.registry_name
   location            = var.location
@@ -6,7 +14,7 @@ resource "azurerm_container_registry" "this" {
   admin_enabled       = var.admin_enabled
 
   dynamic "georeplications" {
-    for_each = var.georeplications
+    for_each = local.georeplications
 
     content {
       location                = georeplications.value["location"]
@@ -15,6 +23,13 @@ resource "azurerm_container_registry" "this" {
   }
 
   tags = var.tags
+
+  lifecycle {
+    precondition {
+      condition     = length(var.georeplications) > 0 && var.sku == "Premium"
+      error_message = "Geo-replications can only configured if SKU is \"Premium\"."
+    }
+  }
 }
 
 resource "azurerm_monitor_diagnostic_setting" "this" {
