@@ -7,11 +7,30 @@ locals {
 }
 
 resource "azurerm_container_registry" "this" {
-  name                = var.registry_name
-  location            = var.location
-  resource_group_name = var.resource_group_name
-  sku                 = var.sku
-  admin_enabled       = var.admin_enabled
+  name                          = var.registry_name
+  location                      = var.location
+  resource_group_name           = var.resource_group_name
+  sku                           = var.sku
+  admin_enabled                 = var.admin_enabled
+  public_network_access_enabled = var.public_network_access_enabled
+  network_rule_bypass_option    = var.network_rule_bypass_azure_services ? "AzureServices" : "None"
+
+  dynamic "network_rule_set" {
+    for_each = var.sku == "Premium" ? [0] : []
+
+    content {
+      default_action = var.network_rule_set_default_action
+
+      dynamic "ip_rule" {
+        for_each = var.network_rule_set_ip_rules
+
+        content {
+          action   = "Allow" # Only supported value
+          ip_range = ip_rule.value
+        }
+      }
+    }
+  }
 
   dynamic "georeplications" {
     for_each = local.georeplications
