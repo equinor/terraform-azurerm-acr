@@ -16,19 +16,17 @@ resource "azurerm_container_registry" "this" {
   network_rule_bypass_option    = var.network_rule_bypass_azure_services ? "AzureServices" : "None"
 
   dynamic "network_rule_set" {
-    for_each = var.sku == "Premium" ? [var.network_rule_set_ip_rules] : []
+    for_each = var.sku == "Premium" ? [0] : []
 
     content {
       default_action = var.network_rule_set_default_action
 
-      dynamic "ip_rule" {
-        for_each = network_rule_set.value
-
-        content {
+      ip_rule = [
+        for ip_range in var.network_rule_set_ip_rules : {
           action   = "Allow" # Only supported value
-          ip_range = ip_rule.value
+          ip_range = ip_range
         }
-      }
+      ]
     }
   }
 
