@@ -33,6 +33,11 @@ variable "georeplications" {
   }))
 
   default = []
+
+  validation {
+    condition     = length(var.georeplications) == length(distinct([for georeplication in var.georeplications : georeplication.location]))
+    error_message = "Value of property \"location\" must be unique for each object."
+  }
 }
 
 variable "log_analytics_workspace_id" {
