@@ -26,8 +26,8 @@ resource "azurerm_container_registry" "this" {
 
   lifecycle {
     precondition {
-      condition     = length(var.georeplications) > 0 && var.sku == "Premium"
-      error_message = "Geo-replications can only configured if SKU is \"Premium\"."
+      condition     = var.sku == "Premium" ? length(var.georeplications) >= 0 : length(var.georeplications) == 0
+      error_message = "Geo-replications can only be configured if SKU is \"Premium\"."
     }
   }
 }
