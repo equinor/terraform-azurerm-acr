@@ -25,11 +25,11 @@ variable "admin_enabled" {
 }
 
 variable "georeplications" {
-  description = "A list of geo-replications to configure for this Container Registry. Only availiable for Premium SKU."
+  description = "A list of properties of the geo-replication blocks for this Container Registry. Only availiable for Premium SKU."
 
   type = list(object({
-    location                = string
-    zone_redundancy_enabled = optional(bool, false)
+    location                = string                # The location where this Container Registry should be geo-replicated.
+    zone_redundancy_enabled = optional(bool, false) # Is zone redundancy enabled for this replication location?
   }))
 
   default = []
