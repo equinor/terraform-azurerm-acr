@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.1.0](https://github.com/equinor/terraform-azurerm-acr/compare/v6.0.1...v6.1.0) (2024-01-05)
+
+
+### Features
+
+* configure networking ([#65](https://github.com/equinor/terraform-azurerm-acr/issues/65)) ([107610d](https://github.com/equinor/terraform-azurerm-acr/commit/107610d4b962e80c4edfcf487c12ee5fbd271f8a))
+* simplify geo-replication configuration ([#63](https://github.com/equinor/terraform-azurerm-acr/issues/63)) ([d318c25](https://github.com/equinor/terraform-azurerm-acr/commit/d318c25c3e23ad1bdc63573c6333533ea67e1df0))
+
 ## [6.0.1](https://github.com/equinor/terraform-azurerm-acr/compare/v6.0.0...v6.0.1) (2023-12-20)
 
 
