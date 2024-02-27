@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.2.0](https://github.com/equinor/terraform-azurerm-acr/compare/v6.1.0...v6.2.0) (2024-02-27)
+
+
+### Features
+
+* Disable metrics by default ([#68](https://github.com/equinor/terraform-azurerm-acr/issues/68)) ([c75f59d](https://github.com/equinor/terraform-azurerm-acr/commit/c75f59ddadaf287774dfe4af7f4329a0e0248807))
+
 ## [6.1.0](https://github.com/equinor/terraform-azurerm-acr/compare/v6.0.1...v6.1.0) (2024-01-05)
 
 
