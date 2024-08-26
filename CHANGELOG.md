@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.2.1](https://github.com/equinor/terraform-azurerm-acr/compare/v6.2.0...v6.2.1) (2024-08-26)
+
+
+### Miscellaneous Chores
+
+* update variable descriptions and add features list ([#75](https://github.com/equinor/terraform-azurerm-acr/issues/75)) ([ea06122](https://github.com/equinor/terraform-azurerm-acr/commit/ea06122696c5b9821c4838b03472736435b9b7fd))
+
 ## [6.2.0](https://github.com/equinor/terraform-azurerm-acr/compare/v6.1.0...v6.2.0) (2024-02-27)
 
 
