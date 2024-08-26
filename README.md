@@ -6,6 +6,12 @@
 
 Terraform module which creates Azure Container Registry resources.
 
+## Features
+
+- Admin user account disabled by default.
+- Public network access denied by default (Premium SKU tier only).
+- Audit logs sent to given Log Analytics workspace by default.
+
 ## Development
 
 1. Read [this document](https://code.visualstudio.com/docs/devcontainers/containers).
