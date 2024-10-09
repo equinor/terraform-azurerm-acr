@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.3.0](https://github.com/equinor/terraform-azurerm-acr/compare/v6.2.1...v6.3.0) (2024-10-09)
+
+
+### Features
+
+* prevent accidental destroy of Container Registry ([#77](https://github.com/equinor/terraform-azurerm-acr/issues/77)) ([4f3b919](https://github.com/equinor/terraform-azurerm-acr/commit/4f3b919ec5d0b2b7f32f0a451968e5e957be60ee))
+
 ## [6.2.1](https://github.com/equinor/terraform-azurerm-acr/compare/v6.2.0...v6.2.1) (2024-08-26)
 
 
