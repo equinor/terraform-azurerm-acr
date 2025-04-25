@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.3.1](https://github.com/equinor/terraform-azurerm-acr/compare/v6.3.0...v6.3.1) (2025-04-25)
+
+
+### Documentation
+
+* update README ([2b1e7fb](https://github.com/equinor/terraform-azurerm-acr/commit/2b1e7fb13a7d239619dda9bab4fb4b7cec3bb382))
+
 ## [6.3.0](https://github.com/equinor/terraform-azurerm-acr/compare/v6.2.1...v6.3.0) (2024-10-09)
 
 
