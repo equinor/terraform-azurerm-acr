@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.3.3](https://github.com/equinor/terraform-azurerm-acr/compare/v6.3.2...v6.3.3) (2025-08-20)
+
+
+### Bug Fixes
+
+* change metric category from `metric` to `enabled_metric` ([#82](https://github.com/equinor/terraform-azurerm-acr/issues/82)) ([6e8977f](https://github.com/equinor/terraform-azurerm-acr/commit/6e8977fc361c0677f3232de5a7f7cbc1ed07b5e8))
+
 ## [6.3.2](https://github.com/equinor/terraform-azurerm-acr/compare/v6.3.1...v6.3.2) (2025-07-28)
 
 
