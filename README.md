@@ -1,12 +1,5 @@
 # Terraform module for Azure Container Registry
 
-[![GitHub Release](https://img.shields.io/github/v/release/equinor/terraform-azurerm-acr)](https://github.com/equinor/terraform-azurerm-acr/releases/latest)
-[![Terraform Module Downloads](https://img.shields.io/terraform/module/dt/equinor/acr/azurerm)](https://registry.terraform.io/modules/equinor/acr/azurerm/latest)
-[![GitHub contributors](https://img.shields.io/github/contributors/equinor/terraform-azurerm-acr)](https://github.com/equinor/terraform-azurerm-acr/graphs/contributors)
-[![GitHub Issues](https://img.shields.io/github/issues/equinor/terraform-azurerm-acr)](https://github.com/equinor/terraform-azurerm-acr/issues)
-[![GitHub Pull requests](https://img.shields.io/github/issues-pr/equinor/terraform-azurerm-acr)](https://github.com/equinor/terraform-azurerm-acr/pulls)
-[![GitHub License](https://img.shields.io/github/license/equinor/terraform-azurerm-acr)](https://github.com/equinor/terraform-azurerm-acr/blob/main/LICENSE)
-
 Terraform module which creates Azure Container Registry (ACR) resources.
 
 ## Features
