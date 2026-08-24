@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.3.4](https://github.com/equinor/terraform-azurerm-acr/compare/v6.3.3...v6.3.4) (2026-08-24)
+
+
+### Code Refactoring
+
+* upgrade azurerm to v5 ([#84](https://github.com/equinor/terraform-azurerm-acr/issues/84)) ([448cec1](https://github.com/equinor/terraform-azurerm-acr/commit/448cec13eb9c04e0d8ab037d67192b52f7f363ca))
+
 ## [6.3.3](https://github.com/equinor/terraform-azurerm-acr/compare/v6.3.2...v6.3.3) (2025-08-20)
 
 
