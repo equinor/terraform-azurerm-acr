@@ -67,8 +67,9 @@ variable "georeplications" {
   description = "A list of geo-replications to be configured for this Container Registry. Only applicable if value of sku is \"Premium\"."
 
   type = list(object({
-    location                = string
-    zone_redundancy_enabled = optional(bool, false)
+    location                        = string
+    zone_redundancy_enabled         = optional(bool, false)
+    global_endpoint_routing_enabled = optional(bool, true)
   }))
 
   default  = []
